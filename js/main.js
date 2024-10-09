@@ -14,7 +14,7 @@ stockProductos.forEach((producto) => {
     <h5>${producto.nombre}</h5>
     <p>Precio: $${producto.precio}</p>
 
-    <button class="btn" data-id="${producto.id}">Comprar</button>
+    <button class="btn" data-id="${producto.id}">Agregar al carrito</button>
     `
     contenedorProductos.appendChild(div)
 

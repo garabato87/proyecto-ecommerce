@@ -1,10 +1,47 @@
 .carrito {
     text-align: center;
     h2 {
+        margin-top: 30px;
         color:#ae77f8 ;
     }
     #contenedor-carrito {
         display: flex;
-        
+        margin-top: 30px;
+        justify-content: center;
+        #carro-vacio{
+            color: white;
+            text-align: center;
+        }
+        .productos-carrito {
+            margin: auto;
+            display: flex;
+            flex-flow: nowrap;
+            align-items: center;
+            gap: 20px;
+            color:#ae77f8 ;
+            img {
+                width: 30%;
+            }
+            button {
+                color: white;
+                background-color:#822ef5 ; 
+                border: #822ef5;
+                border-radius: 5px;
+                width: 30px;
+                height: 30px;
+                align-items: center;
+                align-content: center;
+            }
+        }
+    }
+}
+#totales {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    button {
+        color: white;
+        background-color:#822ef5 ; 
+        border-radius: 4px;
     }
 }

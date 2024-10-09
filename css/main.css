@@ -29,6 +29,9 @@ header .navbar #cuenta-carrito {
 .productos {
   text-align: center;
 }
+.productos h2 {
+  color: #ae77f8;
+}
 .productos #contenedor-productos {
   display: flex;
   flex-flow: wrap;
@@ -62,6 +65,9 @@ header .navbar #cuenta-carrito {
 
 .carrito {
   text-align: center;
+}
+.carrito h2 {
+  color: #ae77f8;
 }
 .carrito #contenedor-carrito {
   display: flex;

@@ -1,0 +1,31 @@
+
+header{
+    box-shadow: 0 3px 5px rgba(14, 13, 13, 0.199);
+    .navbar{
+        #logo{
+            height: 70px;
+            width: 70px;
+        }
+        .link-nav {
+            justify-content: flex-end;
+            align-items: center;
+        }
+        svg{
+            color: #000;
+        }
+        #cuenta-carrito{
+            font-size: 8px;
+            background-color: orangered;
+            border-radius: 100%;
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+            
+        }
+    }
+    
+    
+    /*query*/
+    
+        
+}

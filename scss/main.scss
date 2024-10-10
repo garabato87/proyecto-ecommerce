@@ -1,4 +1,8 @@
 @import "./config/config.scss";
+@import "./config/mixin.scss";
 @import "./config/header.scss";
 @import "./config/productos.scss";
 @import "./config/cart.scss";
+@import "./config/inicio.scss";
+/*npm run watch-css* - para iniciar sass*/
+@import "./config/query.scss";

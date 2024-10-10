@@ -1,6 +1,8 @@
 /* Con esta función creo los productos disponibles */
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 let productos = JSON.parse(localStorage.getItem("figura")); // Cambié a let para poder modificarlo
+const precioTotal = document.getElementById("precio")
+const reiniciarCarrito = document.getElementById("reiniciar-carrito")
 
 function crearTarjetaCarrito() {
     contenedorCarrito.innerHTML = ""; // Limpiar el contenedor antes de agregar productos
@@ -12,12 +14,14 @@ function crearTarjetaCarrito() {
 
             div.innerHTML = `
                 <img src=".${elm.img}">
-                <p>${elm.nombre}</p>
-                <p>Precio: $${elm.precio}</p>
-                <div>
-                    <button class="btn-restar">-</button>
-                    <span class="cantidad">${elm.cantidad}</span>
-                    <button class="btn-sumar">+</button>
+                <div id="desc-carrito">
+                    <p>${elm.nombre}</p>
+                    <p>Precio: $${elm.precio}</p>
+                    <div>
+                        <button class="btn-restar">-</button>
+                        <span class="cantidad">${elm.cantidad}</span>
+                        <button class="btn-sumar">+</button>
+                    </div>
                 </div>
             `;
 
@@ -29,6 +33,7 @@ function crearTarjetaCarrito() {
                 elm.cantidad++;
                 actualizarLocalStorage();
                 crearTarjetaCarrito(); // Actualiza el DOM
+                actualizarPrecio()
             });
 
             // Event listener para restar producto
@@ -41,13 +46,18 @@ function crearTarjetaCarrito() {
                     productos = productos.filter(producto => producto.id !== elm.id); // Elimina el producto del array
                     div.remove(); // Elimina la tarjeta del DOM
                     restarAlCarrito(elm);
+                    actualizarPrecio()
+                    
                 }
                 actualizarLocalStorage(); // Guarda los cambios en localStorage
                 crearTarjetaCarrito(); // Actualiza el DOM
+                actualizarPrecio()
             });
+            
         });
     } else {
         contenedorCarrito.innerHTML = `<p id="carro-vacio">El carrito está vacío</p>`; // Mensaje cuando no hay productos
+        actualizarPrecio()
     }
 }
 
@@ -56,3 +66,14 @@ function actualizarLocalStorage() {
 }
 
 crearTarjetaCarrito();
+actualizarPrecio()
+function actualizarPrecio() {
+    const productos = JSON.parse(localStorage.getItem("figura"))
+    let precio = 0
+    if (productos && productos.length > 0){
+        productos.forEach(producto =>{
+            precio += producto.precio * producto.cantidad
+        })
+        precioTotal.innerText = precio
+    }else precioTotal.innerText = "$0"
+}

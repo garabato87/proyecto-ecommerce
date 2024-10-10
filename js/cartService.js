@@ -1,12 +1,13 @@
+
+//Funcion para agregar al carrito
 function agregarAlCarrito(producto){
-    const memoria = JSON.parse(localStorage.getItem("figura"))
-    console.log(memoria)
-    if (!memoria){
+    const memoria = JSON.parse(localStorage.getItem("figura")) //accede al localStorage del navegador y obtiene el valor asociado con la clave "figura".
+    if (!memoria){ //Si memoria no tiene valor asignado
         const nuevoProducto = getNuevoProductoParaMemoria(producto)
         localStorage.setItem("figura",JSON.stringify([nuevoProducto]))
     }else {
         const indiceProducto = memoria.findIndex(figura => figura.id === producto.id)
-        console.log(indiceProducto);
+       
         const nuevaMemoria = memoria
         
         if (indiceProducto === -1){

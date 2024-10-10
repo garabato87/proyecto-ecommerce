@@ -1,5 +1,7 @@
+@charset "UTF-8";
 body {
   background-color: #1f1f28;
+  margin: 0;
 }
 
 header {
@@ -70,34 +72,44 @@ header .navbar #cuenta-carrito {
   background-color: #822ef5;
 }
 
-.carrito {
-  text-align: center;
-}
-.carrito h2 {
+.row h2 {
   margin-top: 30px;
   color: #ae77f8;
+  text-align: center;
 }
+
 .carrito #contenedor-carrito {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   margin-top: 30px;
-  justify-content: center;
 }
 .carrito #contenedor-carrito #carro-vacio {
   color: white;
   text-align: center;
 }
 .carrito #contenedor-carrito .productos-carrito {
-  margin: auto;
+  margin: 20px;
   display: flex;
-  flex-flow: nowrap;
-  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
   gap: 20px;
   color: #ae77f8;
+  padding: 10px;
+  border: solid 1px #822ef5;
+  border-radius: 10px;
 }
 .carrito #contenedor-carrito .productos-carrito img {
-  width: 30%;
+  height: 200px;
 }
-.carrito #contenedor-carrito .productos-carrito button {
+.carrito #contenedor-carrito .productos-carrito #desc-carrito {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.carrito #contenedor-carrito .productos-carrito #desc-carrito button {
   color: white;
   background-color: #822ef5;
   border: #822ef5;
@@ -109,14 +121,56 @@ header .navbar #cuenta-carrito {
 }
 
 #totales {
+  margin: 20px;
+  padding: 20px;
+  border: solid 1px #822ef5;
+  border-radius: 10px;
   color: white;
   text-align: center;
-  margin-top: 50px;
+  align-content: center;
+  max-height: 300px;
+  position: -webkit-sticky; /* Para compatibilidad con Safari */
+  position: sticky;
+  top: 20px; /* Se fija cuando alcanza la parte superior de la ventana */
+  z-index: 1000; /* Para que esté por encima de otros elementos */
 }
 #totales button {
   color: white;
+  border: #822ef5;
   background-color: #822ef5;
   border-radius: 4px;
+  margin: 5px;
 }
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+#welcome {
+  min-height: 120px;
+  padding: 20px;
+  height: auto;
+  color: white;
+  background: linear-gradient(to right, #822ef5, #c76cf5);
+  text-align: center;
+  align-content: center;
+}
+
+.inicio {
+  background-image: url(/media/background.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #6900f1;
+  text-align: center;
+  align-content: center;
+}
+.inicio .bienvenido {
+  background-color: rgba(255, 255, 255, 0.575);
+  width: 50%;
+  margin: auto;
+}
+
+/*npm run watch-css* - para iniciar sass*/
 
 /*# sourceMappingURL=main.css.map */

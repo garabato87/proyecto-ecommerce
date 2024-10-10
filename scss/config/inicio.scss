@@ -1,0 +1,23 @@
+#welcome {
+    min-height: 120px;
+    padding: 20px;
+    height: auto;
+    color: white;
+    background: linear-gradient(to right, #822ef5, #c76cf5);
+    text-align: center;
+    align-content: center;
+}
+.inicio {
+    background-image: url(/media/background.png);
+    @include posiciones-imagenes (center, cover,100vh) ;
+    color: #6900f1 ;
+    text-align: center;
+    align-content: center;
+    
+    .bienvenido {
+        background-color: rgba(255, 255, 255, 0.575);
+        width: 50%;
+        margin: auto;
+
+    }
+}

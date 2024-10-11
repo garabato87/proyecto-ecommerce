@@ -10,10 +10,12 @@ header {
   /*query*/
 }
 header .bg-body-tertiary {
-  background-color: #31313f;
+  --bs-bg-opacity: 0;
 }
 header .navbar {
-  background-color: 31313f;
+  --bs-navbar-brand-color: white;
+  --bs-navbar-color: white ;
+  --bs-navbar-active-color: white;
 }
 header .navbar #logo {
   height: 70px;
@@ -22,12 +24,14 @@ header .navbar #logo {
 header .navbar .link-nav {
   justify-content: flex-end;
   align-items: center;
+  color: white;
 }
 header .navbar svg {
-  color: #000;
+  color: white;
 }
 header .navbar #cuenta-carrito {
-  font-size: 8px;
+  font-size: 10px;
+  margin-bottom: 10px;
   background-color: orangered;
   border-radius: 100%;
   display: inline-block;
@@ -67,7 +71,7 @@ header .navbar #cuenta-carrito {
   background-color: #31313f;
 }
 .productos #contenedor-productos .producto img {
-  width: 100%;
+  width: 351px;
 }
 .productos #contenedor-productos .producto .btn {
   translate: none;
@@ -75,7 +79,12 @@ header .navbar #cuenta-carrito {
   background-color: #822ef5;
 }
 
-.row h2 {
+.container-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container-carrito h2 {
   margin-top: 30px;
   color: #ae77f8;
   text-align: center;
@@ -131,7 +140,7 @@ header .navbar #cuenta-carrito {
   color: white;
   text-align: center;
   align-content: center;
-  max-height: 300px;
+  max-height: 200px;
   position: -webkit-sticky; /* Para compatibilidad con Safari */
   position: sticky;
   top: 20px; /* Se fija cuando alcanza la parte superior de la ventana */

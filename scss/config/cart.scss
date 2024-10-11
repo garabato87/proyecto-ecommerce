@@ -1,4 +1,7 @@
-.row {
+.container-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
     h2 {
     margin-top: 30px;
     color:#ae77f8 ;
@@ -58,7 +61,7 @@
     color: white;
     text-align: center; //texto en el centro
     align-content: center; //contenido centro vertical
-    max-height: 300px;
+    max-height: 200px;
     position: -webkit-sticky; /* Para compatibilidad con Safari */
     position: sticky;
     top: 20px; /* Se fija cuando alcanza la parte superior de la ventana */

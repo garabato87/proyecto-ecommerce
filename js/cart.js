@@ -2,9 +2,6 @@
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 let productos = JSON.parse(localStorage.getItem("figura")); // Cambié a let para poder modificarlo
 
-
-
-
 function crearTarjetaCarrito() {
     contenedorCarrito.innerHTML = ""; // Limpiar el contenedor antes de agregar productos
 
@@ -12,12 +9,13 @@ function crearTarjetaCarrito() {
         productos.forEach((elm) => {
             const div = document.createElement("div");
             div.classList.add("productos-carrito");
-
+            
             div.innerHTML = `
                 <img src=".${elm.img}">
                 <div id="desc-carrito">
                     <p>${elm.nombre}</p>
                     <p>Precio: $${elm.precio}</p>
+                    
                     <div>
                         <button class="btn-restar">-</button>
                         <span class="cantidad">${elm.cantidad}</span>
@@ -59,7 +57,11 @@ function crearTarjetaCarrito() {
             
         });
     } else {
-        contenedorCarrito.innerHTML = `<p id="carro-vacio">El carrito está vacío</p>`; // Mensaje cuando no hay productos
+        contenedorCarrito.innerHTML = `
+        <h4 id="carro-vacio">El carrito está vacío</h4>
+        
+
+        `; // Mensaje cuando no hay productos
         actualizarPrecio()
     }
 }
@@ -73,6 +75,8 @@ actualizarNumeroCarrito()
 crearTarjetaCarrito();
 actualizarPrecio()
 
+
+/* Boton para reiniciar carrito */
 const botonReiniciarCarrito = document.getElementById("reiniciar-carrito");
 
 botonReiniciarCarrito.addEventListener("click", () => {

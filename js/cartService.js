@@ -1,3 +1,6 @@
+const precioTotal = document.getElementById("precio")
+const reiniciarCarrito = document.getElementById("reiniciar-carrito")
+
 
 //Funcion para agregar al carrito
 function agregarAlCarrito(producto){
@@ -22,7 +25,7 @@ function agregarAlCarrito(producto){
         actualizarNumeroCarrito()
     }
 }
-
+//Funcion para restar al carrito
 const restarAlCarrito = ((producto)=>{
     const memoria = JSON.parse(localStorage.getItem("figura"))
     const indiceProducto = memoria.findIndex(figura => figura.id === producto.id)
@@ -46,6 +49,7 @@ function getNuevoProductoParaMemoria(producto){
 /*Contador del carrito*/
 const cuentaCarritoElement = document.getElementById("cuenta-carrito")
 const totalUnindades = document.getElementById("unidades")
+
 const actualizarNumeroCarrito = (() => {
     const memoria = JSON.parse(localStorage.getItem("figura"))
     const cuenta = memoria.reduce((acum,current) => acum+current.cantidad, 0)
@@ -53,5 +57,13 @@ const actualizarNumeroCarrito = (() => {
     totalUnindades.innerText = cuenta
 })
 
-actualizarNumeroCarrito()
-
+function actualizarPrecio() {
+    const productos = JSON.parse(localStorage.getItem("figura"))
+    let precio = 0
+    if (productos && productos.length > 0){
+        productos.forEach(producto =>{
+            precio += producto.precio * producto.cantidad
+        })
+        precioTotal.innerText = precio
+    }else precioTotal.innerText = "$0"
+}

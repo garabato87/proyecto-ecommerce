@@ -1,8 +1,9 @@
 /* Con esta función creo los productos disponibles */
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 let productos = JSON.parse(localStorage.getItem("figura")); // Cambié a let para poder modificarlo
-const precioTotal = document.getElementById("precio")
-const reiniciarCarrito = document.getElementById("reiniciar-carrito")
+
+
+
 
 function crearTarjetaCarrito() {
     contenedorCarrito.innerHTML = ""; // Limpiar el contenedor antes de agregar productos
@@ -28,6 +29,8 @@ function crearTarjetaCarrito() {
             contenedorCarrito.appendChild(div);
 
             // Event listener para sumar producto
+            
+
             div.getElementsByClassName("btn-sumar")[0].addEventListener("click", () => {
                 agregarAlCarrito(elm);
                 elm.cantidad++;
@@ -65,15 +68,17 @@ function actualizarLocalStorage() {
     localStorage.setItem("figura", JSON.stringify(productos)); // Actualiza localStorage
 }
 
+
+actualizarNumeroCarrito()
 crearTarjetaCarrito();
 actualizarPrecio()
-function actualizarPrecio() {
-    const productos = JSON.parse(localStorage.getItem("figura"))
-    let precio = 0
-    if (productos && productos.length > 0){
-        productos.forEach(producto =>{
-            precio += producto.precio * producto.cantidad
-        })
-        precioTotal.innerText = precio
-    }else precioTotal.innerText = "$0"
-}
+
+const botonReiniciarCarrito = document.getElementById("reiniciar-carrito");
+
+botonReiniciarCarrito.addEventListener("click", () => {
+    productos = []; // Vacía el array de productos
+    actualizarLocalStorage(); // Actualiza el localStorage con el carrito vacío
+    crearTarjetaCarrito(); // Actualiza la vista del carrito en el DOM
+    actualizarPrecio(); // Actualiza el precio total a 0
+    actualizarNumeroCarrito() // Actualiza el numero del carrito
+});

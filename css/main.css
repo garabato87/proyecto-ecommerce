@@ -9,6 +9,9 @@ header {
   box-shadow: 0 3px 5px rgba(14, 13, 13, 0.199);
   /*query*/
 }
+header .bg-body-tertiary {
+  background-color: #31313f;
+}
 header .navbar {
   background-color: 31313f;
 }

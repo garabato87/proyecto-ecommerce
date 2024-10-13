@@ -60,7 +60,6 @@ function crearTarjetaCarrito() {
         contenedorCarrito.innerHTML = `
         <h4 id="carro-vacio">El carrito está vacío</h4>
         
-
         `; // Mensaje cuando no hay productos
         actualizarPrecio()
     }

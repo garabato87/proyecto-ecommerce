@@ -10,6 +10,7 @@ header{
         --bs-navbar-brand-color: white; //boostrap
         --bs-navbar-color: white ; //boostrap
         --bs-navbar-active-color: white; //boostrap
+        
         #logo{
             height: 70px;
             width: 70px;
@@ -19,19 +20,26 @@ header{
             align-items: center;
             color: white;
         }
-        svg{
-            color: white;
+        #cart-icon{
+            display: flex;
+            margin: 5px;
+            svg{
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+            #cuenta-carrito{
+                margin-bottom: 10px;
+                font-size: 10px;
+                background-color: orangered;
+                border-radius: 100%;
+                display: inline-block;
+                width: 16px;
+                text-align: center;
+                
+            }
         }
-        #cuenta-carrito{
-            font-size: 10px;
-            margin-bottom: 10px;
-            background-color: orangered;
-            border-radius: 100%;
-            display: inline-block;
-            width: 16px;
-            text-align: center;
-            
-        }
+        
     }
     
     

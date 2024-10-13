@@ -26,12 +26,18 @@ header .navbar .link-nav {
   align-items: center;
   color: white;
 }
-header .navbar svg {
+header .navbar #cart-icon {
+  display: flex;
+  margin: 5px;
+}
+header .navbar #cart-icon svg {
+  width: 20px;
+  height: 20px;
   color: white;
 }
-header .navbar #cuenta-carrito {
-  font-size: 10px;
+header .navbar #cart-icon #cuenta-carrito {
   margin-bottom: 10px;
+  font-size: 10px;
   background-color: orangered;
   border-radius: 100%;
   display: inline-block;
@@ -79,22 +85,22 @@ header .navbar #cuenta-carrito {
   background-color: #822ef5;
 }
 
+h2 {
+  margin-top: 30px;
+  color: #ae77f8;
+  text-align: center;
+}
+
 .container-carrito {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-.container-carrito h2 {
-  margin-top: 30px;
-  color: #ae77f8;
-  text-align: center;
 }
 
 .carrito #contenedor-carrito {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 30px;
 }
 .carrito #contenedor-carrito #carro-vacio {
   color: white;

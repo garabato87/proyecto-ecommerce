@@ -1,12 +1,12 @@
+h2 {
+margin-top: 30px;
+color:#ae77f8 ;
+text-align: center;
+}
 .container-carrito {
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
-    h2 {
-    margin-top: 30px;
-    color:#ae77f8 ;
-    text-align: center;
-    }
 }
 
 .carrito {
@@ -14,8 +14,6 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 30px;
-        
         #carro-vacio{
             color: white;
             text-align: center;

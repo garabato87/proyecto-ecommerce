@@ -67,3 +67,7 @@ function actualizarPrecio() {
         precioTotal.innerText = precio
     }else precioTotal.innerText = "$0"
 }
+
+actualizarNumeroCarrito()
+crearTarjetaCarrito();
+actualizarPrecio()

@@ -20,9 +20,10 @@ stockProductos.forEach((producto) => {
 
     div.getElementsByTagName("button")[0].addEventListener("click",() => agregarAlCarrito(producto))
     
+    
 })
-
 */
+//Cambie de funcion para poder reutilizarla
 
 
 // Función para renderizar los productos
@@ -42,7 +43,7 @@ function mostrarProductos(productos) {
         `;
         contenedorProductos.appendChild(div);
 
-        div.getElementsByTagName("button")[0].addEventListener("click", () => agregarAlCarrito(producto));
+        div.getElementsByTagName("button")[0].addEventListener("click", () => agregarAlCarrito(producto),);
     });
 }
 

@@ -70,9 +70,7 @@ function actualizarLocalStorage() {
 }
 
 
-actualizarNumeroCarrito()
-crearTarjetaCarrito();
-actualizarPrecio()
+
 
 
 /* Boton para reiniciar carrito */
@@ -85,3 +83,7 @@ botonReiniciarCarrito.addEventListener("click", () => {
     actualizarPrecio(); // Actualiza el precio total a 0
     actualizarNumeroCarrito() // Actualiza el numero del carrito
 });
+
+actualizarNumeroCarrito()
+crearTarjetaCarrito();
+actualizarPrecio()

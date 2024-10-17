@@ -1,4 +1,6 @@
 #welcome {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     min-height: 120px;
     padding: 20px;
@@ -6,7 +8,10 @@
     color: white;
     background: linear-gradient(to right, #822ef5, #c76cf5);
     text-align: center;
-    align-content: center;
+    align-items: center;
+    img {
+        width: 120px;
+    }
 }
 .inicio {
     background-image: url(/media/background.png);

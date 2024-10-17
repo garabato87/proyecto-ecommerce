@@ -25,6 +25,14 @@ function agregarAlCarrito(producto){
         actualizarNumeroCarrito()
     }
 }
+
+/*Toma un producto, le agrega cantidad 1 y lo devuelve */
+function getNuevoProductoParaMemoria(producto){
+    const nuevoProducto = producto 
+    nuevoProducto.cantidad= 1
+    return nuevoProducto
+}
+
 //Funcion para restar al carrito
 const restarAlCarrito = ((producto)=>{
     const memoria = JSON.parse(localStorage.getItem("figura"))
@@ -39,12 +47,6 @@ const restarAlCarrito = ((producto)=>{
     actualizarNumeroCarrito()
 })
 
-/*Toma un producto, le agrega cantidad 1 y lo devuelve */
-function getNuevoProductoParaMemoria(producto){
-    const nuevoProducto = producto 
-    nuevoProducto.cantidad= 1
-    return nuevoProducto
-}
 
 /*Contador del carrito*/
 const cuentaCarritoElement = document.getElementById("cuenta-carrito")

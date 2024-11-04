@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de log
+*.log
+
+# Archivos de compilación
+dist/
+build/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de caché
+.cache/
+*.cache
+
+# Archivos de instalación
+*.tgz
+
+# Archivos temporales de editor
+*~
+*.swp
+*.swo

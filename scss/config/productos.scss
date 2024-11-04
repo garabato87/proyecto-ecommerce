@@ -1,0 +1,40 @@
+.productos {
+    text-align: center;
+    h2 {
+        margin-top: 30px;
+        color:#ae77f8 ;
+        text-shadow: 0 0 5px #822ef5;
+    }
+    
+    #contenedor-productos {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px;
+        row-gap: 30px;
+        
+        .producto{
+            color:#ae77f8 ;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #31313f;
+           
+            img {
+              
+                width: 80%;
+                
+            }
+            img:hover {
+                
+            }
+            .btn {
+                translate: none;
+                color: white;
+                background-color:#822ef5 ;
+            }
+        }
+    }
+}

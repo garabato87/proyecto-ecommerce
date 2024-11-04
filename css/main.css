@@ -1,0 +1,267 @@
+@charset "UTF-8";
+body {
+  background-color: #1f1f28;
+  margin: 0;
+}
+
+.footer {
+  color: white;
+}
+
+header {
+  background-color: #31313f;
+  box-shadow: 0 3px 5px rgba(14, 13, 13, 0.199);
+}
+header .bg-body-tertiary {
+  --bs-bg-opacity: 0;
+}
+header .navbar {
+  --bs-navbar-brand-color:#ae77f8;
+  --bs-navbar-color: #ae77f8 ;
+  --bs-navbar-active-color: #ae77f8;
+}
+header .navbar .navbar-brand h1 {
+  font-size: 24px;
+}
+header .navbar .navbar-toggler {
+  border: white 1px solid;
+}
+header .navbar #logo {
+  height: 70px;
+  width: 70px;
+}
+header .navbar .link-nav {
+  justify-content: flex-end;
+  align-items: center;
+}
+header .navbar .link-nav button {
+  color: #ae77f8;
+  border: #ae77f8 solid 1px;
+}
+header .navbar #cart-icon {
+  display: flex;
+  margin: 5px;
+}
+header .navbar #cart-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+header .navbar #cart-icon #cuenta-carrito {
+  margin-bottom: 10px;
+  font-size: 10px;
+  background-color: rgb(217, 171, 238);
+  border-radius: 100%;
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+
+.productos {
+  text-align: center;
+}
+.productos h2 {
+  margin-top: 30px;
+  color: #ae77f8;
+  text-shadow: 0 0 5px #822ef5;
+}
+.productos #contenedor-productos {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  row-gap: 30px;
+}
+.productos #contenedor-productos .producto {
+  color: #ae77f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #31313f;
+}
+.productos #contenedor-productos .producto img {
+  width: 80%;
+}
+.productos #contenedor-productos .producto .btn {
+  translate: none;
+  color: white;
+  background-color: #822ef5;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #ae77f8;
+  text-align: center;
+}
+
+.container-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.carrito #contenedor-carrito {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.carrito #contenedor-carrito #carro-vacio {
+  color: white;
+  text-align: center;
+}
+.carrito #contenedor-carrito .productos-carrito {
+  background-color: #31313f;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 20px;
+  color: #ae77f8;
+  padding: 10px;
+  border: solid 1px #822ef5;
+  border-radius: 10px;
+}
+.carrito #contenedor-carrito .productos-carrito img {
+  height: 200px;
+}
+.carrito #contenedor-carrito .productos-carrito #desc-carrito {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.carrito #contenedor-carrito .productos-carrito #desc-carrito button {
+  color: white;
+  background-color: #822ef5;
+  border: #822ef5;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+}
+.carrito #contenedor-carrito #formulario-compra {
+  color: white;
+  display: flex;
+  flex-flow: wrap column;
+}
+.carrito #contenedor-carrito #resumen-compra {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+#totales {
+  background-color: #31313f;
+  margin: 20px;
+  padding: 20px;
+  border: solid 1px #822ef5;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  align-content: center;
+  max-height: 200px;
+  position: -webkit-sticky; /* Para compatibilidad con Safari */
+  position: sticky;
+  top: 20px; /* Se fija cuando alcanza la parte superior de la ventana */
+  z-index: 1000; /* Para que esté por encima de otros elementos */
+}
+#totales button {
+  padding: 5px;
+  color: white;
+  border: #822ef5;
+  background-color: #822ef5;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+#welcome {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 120px;
+  padding: 20px;
+  height: auto;
+  color: white;
+  background: linear-gradient(to right, #822ef5, #c76cf5);
+  text-align: center;
+  align-items: center;
+}
+#welcome .inicio-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+#welcome .inicio-container #inicio {
+  align-items: start;
+  text-align: left;
+}
+#welcome .inicio-container #inicio button {
+  color: white;
+  background: linear-gradient(to right, #822ef5, #c76cf5);
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+#welcome .inicio-container img {
+  height: 225px;
+  width: 214px;
+}
+
+#select-container {
+  margin: 50px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  color: white;
+  gap: 50px;
+}
+#select-container div {
+  text-align: center;
+}
+
+#galeria {
+  display: flex;
+  width: 100%;
+  height: 480px;
+}
+#galeria img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 1s ease;
+}
+
+#galeria img:hover {
+  cursor: crosshair;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+#footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #welcome .inicio-container #inicio {
+    width: 70%;
+  }
+}
+/*npm run watch-css* - para iniciar sass*/
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,90 @@
+h2 {
+margin-top: 30px;
+color:#ae77f8 ;
+text-align: center;
+}
+.container-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.carrito {
+    #contenedor-carrito {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        #carro-vacio{
+            color: white;
+            text-align: center;
+        }
+        .productos-carrito {
+            background-color: #31313f;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+            gap: 20px;
+            color:#ae77f8 ;
+            padding: 10px;
+            border: solid 1px #822ef5;
+            border-radius: 10px;
+            img {
+                height: 200px;
+            }
+            #desc-carrito {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                button {
+                    color: white;
+                    background-color:#822ef5 ; 
+                    border: #822ef5;
+                    border-radius: 5px;
+                    width: 30px;
+                    height: 30px;
+                    align-items: center;
+                    align-content: center;
+                }
+            }
+        }
+        #formulario-compra {
+            color: white;
+            display: flex;
+            flex-flow: wrap column;
+        }   
+        #resumen-compra{
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }    
+    }
+}
+#totales {
+    background-color: #31313f;
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px #822ef5 ;
+    border-radius: 10px;
+    color: white;
+    text-align: center; //texto en el centro
+    align-content: center; //contenido centro vertical
+    max-height: 200px;
+    position: -webkit-sticky; /* Para compatibilidad con Safari */
+    position: sticky;
+    top: 20px; /* Se fija cuando alcanza la parte superior de la ventana */
+    z-index: 1000; /* Para que esté por encima de otros elementos */
+    button {
+        padding: 5px;
+        color: white;
+        border: #822ef5;
+        background-color:#822ef5 ; 
+        border-radius: 4px;
+        margin: 5px;
+    }
+}
+.row {
+    --bs-gutter-x: 0;
+}

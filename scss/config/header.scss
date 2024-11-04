@@ -1,0 +1,61 @@
+
+header{
+    
+    background-color: #31313f;
+    box-shadow: 0 3px 5px rgba(14, 13, 13, 0.199);
+    .bg-body-tertiary {
+        --bs-bg-opacity: 0;
+    }
+    .navbar{
+        --bs-navbar-brand-color:#ae77f8; //boostrap
+        --bs-navbar-color: #ae77f8 ; //boostrap
+        --bs-navbar-active-color: #ae77f8; //boostrap
+        .navbar-brand{
+            
+            h1{
+                font-size: 24px;
+            }
+        }
+        .navbar-toggler {
+            border: white  1px solid;
+        }
+        #logo{
+            height: 70px;
+            width: 70px;
+        }
+        .link-nav {
+            justify-content: flex-end;
+            align-items: center;
+            
+            button{
+                color: #ae77f8;
+                border: #ae77f8 solid 1px;
+            }
+        }
+        #cart-icon{
+            display: flex;
+            margin: 5px;
+            svg{
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+            #cuenta-carrito{
+                margin-bottom: 10px;
+                font-size: 10px;
+                background-color: rgb(217, 171, 238);
+                border-radius: 100%;
+                display: inline-block;
+                width: 16px;
+                text-align: center;
+                
+            }
+        }
+        
+    }
+    
+    
+    
+    
+        
+}

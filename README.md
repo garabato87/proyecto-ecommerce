@@ -25,7 +25,7 @@ Esta es una aplicación web de carrito de compras que permite a los usuarios exp
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   git clone https://github.com/garabato87/proyecto-ecommerce.git
 
    Abre el archivo index.html en tu navegador.
 2. Uso
